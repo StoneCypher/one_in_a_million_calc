@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+
+  <head>
+    <script type="text/javascript">
+
+const seq   = n      => new Array(n).fill(false).map( (_, i) => i ),
+      sum   = a_n    => a_n.reduce( (acc, cur) => acc + cur, 0 ),
+      roll  = s      => Math.floor(Math.random() * s) + 1,
+      ndx   = (n, s) => sum( seq(n).map( _ => roll(s) ) ),
+      histo = a_n    => a_n.reduce( (acc, cur) => ((acc.has(cur)? acc.set(cur, acc.get(cur)+1) : acc.set(cur, 1)), acc), new Map() ),
+      osort = (a,b)  => a[0] - b[0],
+      order = m_n    => Array.from(m_n).sort( osort ),
+      passM = f      => sum(seq(6).map(_ => f());
+
+// const rolls = seq(1000).map( _ => ndx(3, 6) ),
+//       h     = histo(rolls);
+//
+// console.log( h );
+// console.log( Array.from(h) );
+// console.log( order(h) );
+
+    </script>
+
+    <style type="text/css">
+      label           { display: block; }
+      input.cardcount { width: 2em; }
+    </style>
+
+  </head>
+
+  <body>
+    
+    <h1>Non-legendary</h1>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Barbarian class</span><span class="desc"></span>
+    </label>
+    
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Squid Fire Knight</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Snickering Squirrel</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Scooch</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Bamboozling Beeble</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">As Luck Would Have It</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Goblin Blastronauts</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Pixie Guide</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Goblin Bookie</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Squirrel-powered Scheme</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Monitor Monitor</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="4" value="0">
+      <span class="title">Wall of Fortune</span><span class="desc"></span>
+    </label>
+    
+
+
+    <h1>Non-legendary</h1>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="1" value="0">
+      <span class="title">Wyll, Blade of Frontiers</span><span class="desc"></span>
+    </label>
+
+    <label for="">
+      <input class="cardcount" type="number" name="" min="0" max="1" value="0">
+      <span class="title">Krark's Other Thumb</span><span class="desc"></span>
+    </label>
+
+  </body>
+
+</html>
